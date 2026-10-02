@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using aznews.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace aznew.Models
@@ -13,5 +14,7 @@ namespace aznew.Models
         }
 
         public DbSet<tblMenu> Menus { get; set; }
+
+        public DbSet<viewPostMenu> viewPostMenus {get;set;}
     }
 }
