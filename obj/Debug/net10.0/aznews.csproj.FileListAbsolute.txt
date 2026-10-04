@@ -136,3 +136,4 @@ D:\ASPdotNET\aznews\obj\Debug\net10.0\refint\aznews.dll
 D:\ASPdotNET\aznews\obj\Debug\net10.0\aznews.pdb
 D:\ASPdotNET\aznews\obj\Debug\net10.0\aznews.genruntimeconfig.cache
 D:\ASPdotNET\aznews\obj\Debug\net10.0\ref\aznews.dll
+D:\ASPdotNET\aznews\bin\Debug\net10.0\SlugGenerator.dll

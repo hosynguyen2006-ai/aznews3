@@ -1,4 +1,5 @@
 @using aznew.Models
+@using aznews.Utilities;
 @model IList<viewPostMenu>
 
 <div class="trending-area fix">
@@ -19,8 +20,9 @@
 
                                     foreach (var t in tren)
                                     {
+                                        string url = Functions.TitleSlugGeneration("post", t.Title, t.PostID);
                                         <li class="news-item">
-                                            <a href="#">@t.Title</a>
+                                            <a href="#\/@url">@t.Title</a>
                                         </li>
                                     }
                                 }
@@ -46,12 +48,13 @@
 
                                 foreach (var f in firstNews)
                                 {
+                                     string url = Functions.TitleSlugGeneration("post", f.Title, f.PostID);
                                     <img src="@f.Images" alt="">
 
                                     <div class="trend-top-cap">
                                         <span>@f.MenuName</span>
                                         <h2>
-                                            <a href="#">@f.Title</a>
+                                            <a href="/@url">@f.Title</a>
                                         </h2>
                                     </div>
 
@@ -73,12 +76,13 @@
 
                                 foreach (var t in threeNews)
                                 {
+                                      string url = Functions.TitleSlugGeneration("post", t.Title, t.PostID);
                                     <div class="col-lg-4">
 
                                         <div class="single-bottom mb-35">
 
-                                            <div class="trend-bottom-img mb-30">
-                                                <img src="@t.Images" alt="">
+                                           <div class="trend-bottom-img mb-30">
+                                           <img src="@t.Images" alt="" style="width: 100%; height: 190px; object-fit: cover;">
                                             </div>
 
                                             <div class="trend-bottom-cap">
@@ -86,11 +90,11 @@
                                                     @t.MenuName
                                                 </span>
 
-                                                <h4>
-                                                    <a href="#">
+                                                <h2>
+                                                    <a href="/@url">
                                                         @t.Title
                                                     </a>
-                                                </h4>
+                                                </h2>
                                             </div>
 
                                         </div>
